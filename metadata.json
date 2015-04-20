@@ -1,5 +1,5 @@
 {
-  "name": "openstackci-ssh",
+  "name": "openstackinfra-ssh",
   "version": "0.0.1",
   "author": "OpenStack CI",
   "summary": "Puppet module for SSH",
