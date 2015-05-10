@@ -5,10 +5,16 @@ class ssh ($trusted_ssh_source = 'puppetmaster.openstack.org') {
     package { $::ssh::params::package_name:
       ensure => present,
     }
-    service { $::ssh::params::service_name:
-      ensure     => running,
-      hasrestart => true,
-      subscribe  => File['/etc/ssh/sshd_config'],
+    if ($::in_chroot) {
+      notify { 'sshd in chroot':
+        message => 'sshd not refreshed, running in chroot',
+      }
+    } else {
+      service { $::ssh::params::service_name:
+        ensure     => running,
+        hasrestart => true,
+        subscribe  => File['/etc/ssh/sshd_config'],
+      }
     }
     file { '/etc/ssh/sshd_config':
       ensure  => present,
