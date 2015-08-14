@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: yolanda.robla <info@ysoft.biz>
+Code-Review+2: Spencer Krum <nibz@spencerkrum.com>
+Workflow+1: Spencer Krum <nibz@spencerkrum.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 14 Aug 2015 20:36:21 +0000
+Reviewed-on: https://review.openstack.org/212882
+Project: openstack-infra/puppet-ssh
+Branch: refs/heads/master
