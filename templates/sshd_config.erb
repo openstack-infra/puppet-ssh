@@ -88,3 +88,6 @@ UsePAM yes
 # allow ansible connections from puppetmaster host
 Match host <%= @trusted_ssh_source %>
     PermitRootLogin without-password
+# allow ansible connections from localhost
+Match host localhost
+    PermitRootLogin without-password
