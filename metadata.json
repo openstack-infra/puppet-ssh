@@ -1,6 +1,6 @@
 {
   "name": "openstackinfra-ssh",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "OpenStack CI",
   "summary": "Puppet module for SSH",
   "license": "Apache 2.0",
