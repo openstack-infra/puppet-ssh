@@ -3,8 +3,10 @@
 # configure the ssh server
 class ssh::server($trusted_ssh_source = 'puppetmaster.openstack.org') {
     include ::ssh::params
-    package { $::ssh::params::package_name:
-        ensure => present,
+    if !defined(Package[$::ssh::params::package_name]) {
+        package { $::ssh::params::package_name:
+            ensure => present,
+        }
     }
     if ($::in_chroot) {
         notify { 'sshd in chroot':

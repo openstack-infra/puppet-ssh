@@ -9,8 +9,10 @@ class ssh::client(
     $ssh_client_loglevel = 'QUIET',
 ) {
     include ::ssh::params
-    package { $::ssh::params::client_package_name:
-        ensure => present,
+    if !defined(Package[$::ssh::params::client_package_name]) {
+        package { $::ssh::params::client_package_name:
+            ensure => present,
+        }
     }
     file { '/etc/ssh/ssh_config':
         ensure  => present,
