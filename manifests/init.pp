@@ -1,6 +1,9 @@
 # == Class: ssh
 #
-class ssh ($trusted_ssh_source = 'puppetmaster.openstack.org') {
+class ssh (
+    $trusted_ssh_source = 'puppetmaster.openstack.org',
+    $permit_root_login = 'no',
+) {
     include ::ssh::params
     package { $::ssh::params::package_name:
       ensure => present,
