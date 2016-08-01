@@ -1,6 +1,7 @@
 # == Class: ssh
 #
 class ssh (
+    $trusted_ssh_type = 'host',
     $trusted_ssh_source = 'puppetmaster.openstack.org',
     $permit_root_login = 'no',
 ) {
