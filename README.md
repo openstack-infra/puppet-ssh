@@ -1,3 +1,3 @@
-# OpenStack SSH Module
+# This repo has moved to OpenDev
 
-This module installs and configures SSH
+It can now be found at [https://opendev.org/opendev/puppet-ssh](https://opendev.org/opendev/puppet-ssh)
